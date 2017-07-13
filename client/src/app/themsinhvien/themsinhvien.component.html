@@ -1,0 +1,110 @@
+<div class="main-panel">
+  <nav class="navbar navbar-transparent navbar-absolute">
+    <div class="container-fluid">
+      <div class="navbar-header">
+
+        <a class="navbar-brand" href="/">THÊM SINH VIÊN</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+
+          <li>
+            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+              <a routerLink="/thongtingiaovien"><i class="material-icons">person</i></a>
+            </a>
+          </li>
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group  is-empty">
+            <input type="text" class="form-control" placeholder="Search" (focus)="onFocus($event)">
+            <span class="material-input"></span>
+          </div>
+          <button type="submit" class="btn btn-white btn-round btn-just-icon">
+								<i class="material-icons">search</i><div class="ripple-container"></div>
+							</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+
+
+        <div class="col-lg-12 col-md-12">
+          <flash-messages></flash-messages>
+          <div class="card card-nav-tabs">
+            <div class="card-header" data-background-color="purple">
+              <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                  <span class="nav-tabs-title">Form thêm sinh viên </span>
+                  <ul class="nav nav-tabs" data-tabs="tabs">
+
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="tab-content">
+                <form>
+                  <div class="form-group">
+                    <label for="mssv">MSSV: <span>(*)</span></label>
+                    <input id="mssv" class="form-control" [(ngModel)]="mssv" type="text" #mssvsv="ngModel" (keyup)="onKeyup($event)" name="mssv"
+                      required placeholder="Nhập mssv không được trùng với mssv cũ ..." />
+                    <div [hidden]="mssvsv.valid || mssvsv.pristine" class="alert alert-danger">
+                      Bạn chưa nhập mssv
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="ho">Họ: <span>(*)</span></label>
+                    <input type="text" class="form-control" [(ngModel)]="ho" name="ho" #hosv="ngModel" placeholder="Nhập họ sinh viên..." required>
+                    <div [hidden]="hosv.valid || hosv.pristine" class="alert alert-danger">
+                      Bạn chưa nhập họ
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="ten">Tên: <span>(*)</span></label>
+                    <input type="text" class="form-control" [(ngModel)]="ten" name="ten" #tensv="ngModel" placeholder="Nhập tên sinh viên..."
+                      required>
+                    <div [hidden]="tensv.valid || tensv.pristine" class="alert alert-danger">
+                      Bạn chưa nhập tên
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="gioitinh">Giới tính:</label> Nam: <input type="radio" [(ngModel)]="gioitinh" name="gioitinh"
+                      value="nam"> || Nữ:
+                    <input type="radio" name="gioitinh" value="nu" [(ngModel)]="gioitinh">
+                  </div>
+                  <div class="form-group">
+                    <label for="sdt">SĐT: </label>
+                    <input id="email" type="number" class="form-control" pattern="[0-9]+" [(ngModel)]="sdt" name="sdt" #sdtsv="ngModel" required
+                      placeholder="Nhập sdt của sv ..." />
+                    <div [hidden]="sdtsv.valid || sdtsv.pristine" class="alert alert-danger">
+                      Bạn cần nhập sdt đúng chuẩn
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email: <span>(*)</span></label>
+                    <input id="email" type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="email"
+                      name="email" #Email="ngModel" required placeholder="Nhập email cho sv ..." />
+                    <div [hidden]="Email.valid || Email.pristine" class="alert alert-danger">
+                      Bạn cần nhập email đúng chuẩn
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-round" (click)="themSinhvien()">Thêm thông tin</button>
+                  <button type="reset" class="btn btn-danger btn-round">Xoá nhập lại</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,37 @@
+.card-content span{
+    color: blue;
+    font-size: 27px;   
+}
+.modal-header{
+    background-color: #00bcd4;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 5px 5px 15px #e1e1e1;
+}
+.modal-header .modal-title{
+    padding-bottom: 12px;
+}
+.close{
+    color: red;
+    font-size: 20px;
+}
+
+label{
+color: black;
+}
+label span{
+color: red;
+}
+form .ng-valid[required],
+form .ng-valid.required {
+border-left: 5px solid #42A948;
+/* green */
+}
+
+form .ng-invalid:not(form) {
+border-left: 5px solid #a94442;
+/* red */
+}
+.navbar-brand{
+    color: #fff;
+}

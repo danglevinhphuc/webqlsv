@@ -1,0 +1,22 @@
+label{
+color: black;
+}
+label span{
+color: red;
+}
+i.mon{
+    color: yellow;
+}
+form .ng-valid[required],
+form .ng-valid.required {
+border-left: 5px solid #42A948;
+/* green */
+}
+
+form .ng-invalid:not(form) {
+border-left: 5px solid #a94442;
+/* red */
+}
+.navbar-brand{
+    color: #fff;
+}

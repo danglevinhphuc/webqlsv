@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule "danhsachsinhvien" "?c=trangchu&a=render"
+RewriteRule "tongket" "?c=trangchu&a=render"
+RewriteRule "inketqua" "?c=trangchu&a=render"
+RewriteRule "themdiem" "?c=trangchu&a=render"
+RewriteRule "thongtingiaovien" "?c=trangchu&a=render"
+RewriteRule "^editsinhvien/(.*)$" "?c=trangchu&a=render&abc=$1"
+RewriteRule "^editdiemsinhvien/(.*)$" "?c=trangchu&a=render&abc=$1"

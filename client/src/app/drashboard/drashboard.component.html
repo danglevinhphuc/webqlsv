@@ -1,0 +1,64 @@
+<div class="sidebar" data-color="purple" style="position:fixed">
+
+
+	<div class="logo">
+		<a routerLink="/" class="simple-text">
+QUẢN LÝ SINH VIÊN
+</a>
+	</div>
+
+	<div class="sidebar-wrapper">
+		<ul class="nav">
+
+			<li routerLinkActive="active">
+
+				<a routerLink="/danhsachsinhvien"><i class="material-icons">person</i>DANH SÁCH SINH VIÊN</a>
+			</li>
+			<li routerLinkActive="active">
+				<a routerLink="/thongtingiaovien"><i class="material-icons">content_paste</i>THÔNG TIN GIÁO VIÊN</a>
+			</li>
+			<li routerLinkActive="active">
+				<a routerLink="/themdiem"><i class="material-icons">library_books</i>THÊM ĐIỂM</a>
+			</li>
+			<li routerLinkActive="active">
+				<a routerLink="/tongket"><i class="material-icons">bubble_chart</i>TỔNG KẾT</a>
+			</li>
+
+		</ul>
+	</div>
+</div>
+
+<div class="navbar-header pull-left">
+	<div class="row">
+		<div class="col-md-2" style="float:left">
+			<button type="button" class="navbar-toggle" (click)="chuyenMenu()">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+		</div>
+		<div class="col-md-12">
+			<div  *ngIf="chuyen" style="float:right">
+				<ul class="nav menu-mobile">
+
+					<li routerLinkActive="active">
+
+						<a routerLink="/danhsachsinhvien"><i class="material-icons">person</i>DANH SÁCH SINH VIÊN</a>
+					</li>
+					<li routerLinkActive="active">
+						<a routerLink="/thongtingiaovien"><i class="material-icons">content_paste</i>THÔNG TIN GIÁO VIÊN</a>
+					</li>
+					<li routerLinkActive="active">
+						<a routerLink="/themdiem"><i class="material-icons">library_books</i>THÊM ĐIỂM</a>
+					</li>
+					<li routerLinkActive="active">
+						<a routerLink="/tongket"><i class="material-icons">bubble_chart</i>TỔNG KẾT</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>

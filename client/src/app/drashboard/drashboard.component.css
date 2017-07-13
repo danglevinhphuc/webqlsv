@@ -1,0 +1,19 @@
+.sidebar{
+  
+  background: linear-gradient(to bottom, rgba(255,0,0,0), #fff); /*Standard*/ 
+}
+.sidebar-wrapper a{
+  color: #fff;
+}
+.icon-bar{
+  background-color: #ff9800;
+}
+.menu-mobile{
+  background-color: #ff9800;
+}
+.menu-mobile li a{
+  color: #fff;
+}
+.menu-mobile.nav>li>a:focus,.menu-mobile.nav>li>a:hover{
+  color: #9c27b0;
+}
